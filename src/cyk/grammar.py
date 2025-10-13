@@ -1,3 +1,4 @@
+# grammar.py
 from typing import Dict, Set, Tuple, List
 
 # Representación: dict con conjuntos

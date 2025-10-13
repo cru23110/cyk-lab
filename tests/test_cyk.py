@@ -1,5 +1,6 @@
-from cyk.grammar import load_grammar
-from cyk.cyk import cyk_parse
+# tests/test_cyk.py
+from src.cyk.grammar import load_grammar
+from src.cyk.cyk import cyk_parse
 def test_cyk_accepts():
     G = load_grammar("data/grammars/1-cnf.txt")
     ok, *_ = cyk_parse(G, "id + id * id".split())

@@ -1,8 +1,9 @@
+# benchmark.py
 import time
 from pathlib import Path
-from cyk.grammar import load_grammar
-from cyk.cyk import cyk_parse
-from cyk.tokenize import normalize_sentence
+from src.cyk.grammar import load_grammar
+from src.cyk.cyk import cyk_parse
+from src.cyk.tokenize import normalize_sentence
 
 def bench(grammar_path: str, sentences):
     G = load_grammar(grammar_path)
@@ -19,9 +20,14 @@ if __name__ == "__main__":
     eng = root / "data/grammars/english-cnf.txt"
     sentences = [
         "She eats a cake.",
-        "She eats a cake with a fork.",
-        "The cat drinks the beer.",
+        "He eats the cake with a fork.",
+        "He drinks the beer.",
+        "She eats the soup with a spoon.",
+        "He cuts the meat with a knife.",
         "Eats she cake.",
-        "She eat a cake."
+        "She eat a cake.",
+        "The drinks cat beer.",
+        "Cake eats she.",
+        "The eats. she cake"
     ]
     bench(str(eng), sentences)

@@ -1,3 +1,4 @@
+# cli.py
 import time
 import click
 from .grammar import load_grammar

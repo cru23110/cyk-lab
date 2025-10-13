@@ -1,8 +1,9 @@
+# tests/test_english.py
 from pathlib import Path
-from cyk.grammar import load_grammar
-from cyk.cyk import cyk_parse
-from cyk.tokenize import normalize_sentence
-from cyk.cnf import to_cnf_pipeline
+from src.cyk.grammar import load_grammar
+from src.cyk.cyk import cyk_parse
+from src.cyk.tokenize import normalize_sentence
+from src.cyk.cnf import to_cnf_pipeline
 
 ROOT = Path(__file__).resolve().parents[1]
 ENG = ROOT / "data/grammars/english-cnf.txt"
